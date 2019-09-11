@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import collector from '../assets/images/collector.jpg';
+import './newform.scss';
 
 function NewForm(props) {
   let _name = null;
@@ -12,15 +14,19 @@ function NewForm(props) {
   }
 
   return (
-    <div>
+    <div className='main-menu'>
+      <h1> Tamagotcha </h1>
+      <img src={collector} />
       <form onSubmit={handleNewFormSubmission}>
         <input
           id='name'
           type='text'
           placeholder='Enter your Tamagotchas name'
+          required
           ref={(input) => { _name = input; }}/>
-
-        <button type='submit'>Create!</button>
+  
+        <br />
+        <button className='btn btn-success' type='submit'>Create!</button>
       </form>
     </div>
   );
