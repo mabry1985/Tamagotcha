@@ -6,6 +6,7 @@ class Tamagotcha extends Component {
   }
 
   render() {
+    console.log('props:', this.props);
     return (
       <div>
         <h1>Name: {this.props.name}</h1>

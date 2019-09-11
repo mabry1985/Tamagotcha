@@ -7,30 +7,29 @@ class AppControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: null,
+      name: '',
       tamagotchaVisibleOnPage: false,
     };
-    this.handleShowingTamagotcha = this.handleShowingTamagotcha.bind(this);
-    this.handleNamingTamagotcha =
-    this.handleNamingTamagotcha.bind(this);
   }
 
-  handleShowingTamagotcha() {
+  handleShowingTamagotcha = () => {
     this.setState({ tamagotchaVisibleOnPage: true });
-  }
+  };
 
-  handleNamingTamagotcha(newName) {
+  handleNamingTamagotcha = (newName) => {
+    console.log('test');
     this.setState({ name: newName });
-  }
+    console.log(newName);
+  };
 
   render() {
     let currentlyVisibleContent = null;
+
     if (this.state.tamagotchaVisibleOnPage) {
       currentlyVisibleContent = <Tamagotcha
         name={this.state.name} />;
 
     } else {
-
       currentlyVisibleContent = <NewForm
         onShowingTamagotcha={this.handleShowingTamagotcha}
         onNamingTamagotcha={this.handleNamingTamagotcha} />;

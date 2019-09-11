@@ -5,23 +5,23 @@ function NewForm(props) {
   let _name = null;
 
   function handleNewFormSubmission(event) {
+    console.log('handleNewFormSubmission');
     event.preventDefault();
-    props.onNamingTamagotcha({ name: _name.value, });
-    _names.value = '';
+    props.onShowingTamagotcha();
+    props.onNamingTamagotcha(_name.value);
+    _name.value = '';
   }
 
   return (
     <div>
       <form onSubmit={handleNewFormSubmission}>
         <input
+          id='name'
           type='text'
           placeholder='Enter your Tamagotchas name'
           ref={(input) => { _name = input; }}/>
 
-        <button onClick={props.onShowingTamagotcha}
-                type='submit'>
-                Create!
-        </button>
+        <button type='submit'>Create!</button>
       </form>
     </div>
   );
@@ -29,6 +29,7 @@ function NewForm(props) {
 
 NewForm.propTypes = {
   onShowingTamagotcha: PropTypes.func,
+  onNamingTamagotcha: PropTypes.func,
 };
 
 export default NewForm;
