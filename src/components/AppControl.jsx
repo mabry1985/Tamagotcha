@@ -17,9 +17,7 @@ class AppControl extends React.Component {
   };
 
   handleNamingTamagotcha = (newName) => {
-    console.log('test');
     this.setState({ name: newName });
-    console.log(newName);
   };
 
   render() {

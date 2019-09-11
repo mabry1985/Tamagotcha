@@ -9,7 +9,6 @@ function NewForm(props) {
     event.preventDefault();
     props.onShowingTamagotcha();
     props.onNamingTamagotcha(_name.value);
-    _name.value = '';
   }
 
   return (
