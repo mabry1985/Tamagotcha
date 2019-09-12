@@ -19,9 +19,18 @@ button {
 
 .background {
   position: relative;
-  right: 5px;
-  max-width: 800px;
+  right: 200px;
+  bottom: 177px;
+  max-width: 1200px;
   z-index: 10;
+}
+
+.grumpy-cat {
+  position: relative;
+  bottom: 553px;
+  left: 404px;
+  max-width: 300px;
+  z-index: 1000;
 }
 
 p {
@@ -39,18 +48,18 @@ input {
   border: 1px solid grey;
 }
 
-.grumpy-cat {
-  position: relative;
-  bottom: 300px;
-  left: 421px;
-  max-width: 280px;
-  z-index: 1000;
-}
 
 video {
   position: relative;
-  bottom: 298px;
-  left: 42px;
-  max-width: 100px;
+  bottom: 1173px;
+  left: 291px;
+  max-width: 149px;
   z-index: 1;
+}
+
+.border{
+  position: relative;
+  bottom: 945px;
+  right: 7px;
+  z-index: 100000;
 }
