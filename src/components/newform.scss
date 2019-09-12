@@ -26,10 +26,19 @@ button {
 }
 
 .grumpy-cat {
+  visibility: hidden;
   position: relative;
   bottom: 553px;
   left: 404px;
   max-width: 300px;
+  z-index: 1000;
+}
+
+.grumpy-cat-full {
+  position: relative;
+  bottom: 551px;
+  left: -263px;
+  max-width: 113px;
   z-index: 1000;
 }
 

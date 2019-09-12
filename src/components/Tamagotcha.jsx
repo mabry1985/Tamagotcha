@@ -4,7 +4,7 @@ import background from '../assets/images/background.png';
 import tv from '../assets/videos/channelchanging.mp4';
 import grumpycat from '../assets/images/grumpy-cat.png';
 import border from '../assets/images/Rectangle.png';
-import border1 from '../assets/images/Rectangle.png';
+import grumpycatfull from '../assets/images/grumpy-cat-full.png';
 
 class Tamagotcha extends Component {
   constructor(props) {
@@ -95,6 +95,7 @@ class Tamagotcha extends Component {
       >
           <img src={background} className='background' />
           <img src={grumpycat} className='grumpy-cat' />
+        <img src={grumpycatfull} className='grumpy-cat-full' />
           <img src={border} className='border' />
           <video autoPlay muted loop>
             <source src={tv} type="video/mp4" />
