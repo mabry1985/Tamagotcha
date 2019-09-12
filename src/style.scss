@@ -4,3 +4,11 @@
   // background-image: url("./assets/images/background.png");
   // background-repeat: no-repeat;
 }
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
