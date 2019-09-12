@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
+import background from '../assets/images/background.png';
+import tv from '../assets/videos/channelchanging.mp4';
+import grumpycat from '../assets/images/grumpy-cat.png';
 
 class Tamagotcha extends Component {
   constructor(props) {
@@ -26,6 +29,7 @@ class Tamagotcha extends Component {
 
     this.healthCheckTimer = setInterval(
       () => this.healthCheck(),
+      1000
     );
   }
 
@@ -72,20 +76,27 @@ class Tamagotcha extends Component {
   render() {
     return (
       <CSSTransitionGroup
-  transitionName="example"
-  transitionAppear={true}
-  transitionAppearTimeout={500}
-  transitionEnter={false}
-  transitionLeave={false}>
-  <h1>Name: {this.props.name}</h1>
-  <h2>Health: {this.state.health}</h2>
-  <h2>Hunger: {this.state.hunger}</h2>
-  {/* <h2>Sleepiness: {this.state.sleepiness}</h2>
-  <h2>Boredom: {this.state.boredom}</h2>
-  */}
-  <button className='btn btn-success' onClick={this.feed}>feed</button>
-  <button className='btn btn-success' onClick={this.heal}>heal</button>
-</CSSTransitionGroup>
+        transitionName="example"
+        transitionAppear={true}
+        transitionAppearTimeout={500}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <img src={background} className='background' />
+        <img src={grumpycat} className='grumpy-cat' />
+      <video autoPlay muted loop>
+          <source src={tv} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h1>Name: {this.props.name}</h1>
+        <h2>Health: {this.state.health}</h2>
+        <h2>Hunger: {this.state.hunger}</h2>
+        {/* <h2>Sleepiness: {this.state.sleepiness}</h2>
+           <h2>Boredom: {this.state.boredom}</h2>
+        */}
+        <button className='btn btn-success' onClick={this.feed}>feed</button>
+        <button className='btn btn-success' onClick={this.heal}>heal</button>
+      </CSSTransitionGroup>
 
     );
   }

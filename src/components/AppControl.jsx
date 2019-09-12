@@ -8,7 +8,7 @@ class AppControl extends React.Component {
     super(props);
     this.state = {
       name: '',
-      tamagotchaVisibleOnPage: false,
+      tamagotchaVisibleOnPage: true,
     };
   }
 

@@ -14,17 +14,18 @@ function NewForm(props) {
   }
 
   return (
-    <div className='main-menu'>
+    <div className='main-menu container'>
       <h1> Tamagotcha </h1>
-      <img src={collector} />
-      <form onSubmit={handleNewFormSubmission}>
+      <img src={collector} className='collector' />
+      <p>Hey guys, wanna play?</p>
+      <form onSubmit={handleNewFormSubmission} >
         <input
           id='name'
           type='text'
-          placeholder='Enter your Tamagotchas name'
+          placeholder='Name your Tamagotcha'
           required
           ref={(input) => { _name = input; }}/>
-  
+
         <br />
         <button className='btn btn-success' type='submit'>Create!</button>
       </form>

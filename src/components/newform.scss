@@ -1,14 +1,56 @@
-
 .main-menu {
   text-align: center;
   padding-top: 10px;
   margin: auto;
 }
 
-form {
-  padding-top: 10px;
+input {
+  width: 200px;
 }
 
 button {
   margin-top: 10px;
+}
+
+.collector {
+  border-radius: 100%;
+  max-width: 200px;
+}
+
+.background {
+  position: relative;
+  right: 5px;
+  max-width: 800px;
+  z-index: 10;
+}
+
+p {
+  font-size: 10px;
+  font-style: italic;
+  padding-top: 2px;
+}
+
+label {
+  text-decoration: underline;
+}
+
+input {
+  text-align: center;
+  border: 1px solid grey;
+}
+
+.grumpy-cat {
+  position: relative;
+  bottom: 300px;
+  left: 421px;
+  max-width: 280px;
+  z-index: 1000;
+}
+
+video {
+  position: relative;
+  bottom: 298px;
+  left: 42px;
+  max-width: 100px;
+  z-index: 1;
 }
